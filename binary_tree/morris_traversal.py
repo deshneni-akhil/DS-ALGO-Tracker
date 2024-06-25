@@ -1,4 +1,4 @@
-from tree_builder import BuildTree as BT
+from tree_templates.tree_builder import BuildTree as BT
 
 def morris_inorder_traversal(root) -> list[int]:
     # Morris Traversal is a way to traverse the tree without using the stack and recursion.

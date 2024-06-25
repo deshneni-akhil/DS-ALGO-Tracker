@@ -1,0 +1,6 @@
+# Ignore Python files
+*.pyc
+*.pyo
+__pycache__/
+.venv/
+*.egg-info

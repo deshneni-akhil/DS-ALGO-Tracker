@@ -1,4 +1,5 @@
-from tree_builder import BuildTree as BT
+from tree_templates.tree_builder import BuildTree as BT
+from collections import deque
 
 def recursive_inorder(root:'BT') -> None:
     if not root:
@@ -65,6 +66,23 @@ def iterative_postorder(root:'BT') -> None:
                 curr = None
             else:
                 curr = curr.right
+
+def level_order_traversal(root:'BT') -> None:
+    queue = deque()
+    queue.append(root)
+    buffer = []
+    while queue:
+        length = len(queue)
+        while length > 0:
+            curr = queue.popleft()
+            buffer.append(curr.val)
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
+            length -= 1
+        print(*buffer)
+        buffer = list()
     
 if __name__ == '__main__':
     tree = BT()
@@ -79,3 +97,4 @@ if __name__ == '__main__':
     # recursive_postorder(root)
     # print()
     # iterative_postorder(root)
+    level_order_traversal(root)

@@ -22,13 +22,13 @@ class BuildTree:
             while length:
                 node = queue.popleft()
                 if index < len(values):
-                    if values[index]:
+                    if values[index] is not None:
                         node.left = BuildTree()
                         node.left.val = values[index]
                         queue.append(node.left)
                     index += 1
                 if index < len(values):
-                    if values[index]:
+                    if values[index] is not None:
                         node.right = BuildTree()
                         node.right.val = values[index]
                         queue.append(node.right)
