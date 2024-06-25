@@ -1,2 +1,2 @@
-# DS-ALGO-Tracker
-This repo is to track DS and Algorithms finding patterns and able to come up with efficient solutions
+# Purpose
+The purpose of this repository is to explore and solve various data structures and algorithms questions. By analyzing patterns and developing efficient solutions, aiming to enhance my understanding of these fundamental concepts.
