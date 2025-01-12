@@ -1,0 +1,54 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 4,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${name}",
+                            "weight": "bolder",
+                            "size": "extraLarge",
+                            "spacing": "none",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "SEPTF form completed for student ${student.firstname} ${student.lastname}. Please Refer file ${file} for details.",
+                            "isSubtle": true,
+                            "spacing": "none",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 1,
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${image}",
+                            "altText": "${imageAlt}",
+                            "size": "medium"  
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "View File",
+            "iconUrl": "https://adaptivecards.io/content/open-url.png",
+            "url": "${url}",
+            "style": "positive"
+        }
+    ]
+}

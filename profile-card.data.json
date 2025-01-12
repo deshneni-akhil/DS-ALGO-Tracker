@@ -1,0 +1,21 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "LocalBusiness",
+    "name": "SEPTF Form Update",
+    "url": "https://csulb.sharepoint.com/:b:/r/sites/UTS-Innocation-Test/Shared%20Documents/General/CreatePowerAutomateFlow-UploadFiletoSharepointLIstItem.pdf?csf=1&web=1&e=wxcd6b",
+    "address": {
+        "addressLocality": "Redmond",
+        "addressRegion": "WA",
+        "streetAddress": "16851 Redmond Way",
+        "postalCode": "98052",
+        "addressCountry": "US"
+    },
+    "image": "https://www.csulb.edu/sites/default/files/images/csulb_shark_handsonhips_gray_2_0.png",
+    "imageAlt": "image of beer growlers on a table",
+    "telephone": "+14258816461",
+    "student": {
+        "firstname": "John",
+        "lastname": "Doe"
+    },
+    "file": "septf-form.pdf"
+}
