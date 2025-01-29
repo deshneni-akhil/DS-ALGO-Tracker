@@ -2,12 +2,12 @@ from typing import Optional
 
 # Definition for a Node.
 class Node:
-    def __init__(self, val = 0, neighbors = None):
+    def __init__(val = 0, neighbors = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 
 class GraphClone:
-    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+    def cloneGraph(node: Optional['Node']) -> Optional['Node']:
         clone = {}
         
         if not node:
@@ -25,7 +25,7 @@ class GraphClone:
         cloner(node)
         return clone[node]
 
-    def print_graph(self, node, visited):
+    def print_graph(node, visited):
         if not node or node in visited:
             return
         print(node.val)

@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 from typing import List
 
 class CourseSchedule:
-    def approach_1(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+    def approach_1(numCourses: int, prerequisites: List[List[int]]) -> bool:
         courses = defaultdict(list)
 
         for prerequisite in prerequisites:
@@ -15,7 +15,7 @@ class CourseSchedule:
         
         return True
     
-    def approach_2(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+    def approach_2(numCourses: int, prerequisites: List[List[int]]) -> bool:
         courses = defaultdict(list)
         crs_in_degree = [0] * numCourses
 
@@ -41,10 +41,10 @@ class CourseSchedule:
         return len(topo_order) == numCourses
 
     
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]], approach) -> bool:
+    def canFinish(numCourses: int, prerequisites: List[List[int]], approach) -> bool:
         return approach(numCourses, prerequisites)
     
-    def can_complete(self, course, courses, visited, rec_stack):
+    def can_complete(course, courses, visited, rec_stack):
         if course in rec_stack:
             return False
         if course in visited: 

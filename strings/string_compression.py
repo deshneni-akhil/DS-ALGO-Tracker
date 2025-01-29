@@ -1,7 +1,7 @@
 from typing import List
 
 class string_compression:
-    def compress(self, chars: List[str]) -> int:
+    def compress(chars: List[str]) -> int:
         p1, p2 = 0, 0 
         p2_past = 0
         n = len(chars)
@@ -18,12 +18,12 @@ class string_compression:
                 chars[p1] = chars[p2] 
         return p1
     
-    def findsequence(self, letter, p2, n, chars):
+    def findsequence(letter, p2, n, chars):
         while p2 < n and chars[p2] == letter:
             p2 += 1
         return p2
     
-    def string_size(self, p1, p2):
+    def string_size(p1, p2):
         num = (p2 - p1) 
         temp = []
         if num < 2:

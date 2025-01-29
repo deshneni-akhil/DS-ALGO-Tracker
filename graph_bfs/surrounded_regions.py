@@ -4,7 +4,7 @@ from typing import List
 class SurroundedRegions:
 
     # Time complexity: O(N*M) ^ 2 & Space complexity: O(N*M)
-    def approach_long(self, board):
+    def approach_long(board):
         ROWS, COLS = len(board), len(board[0])
         visit = set()
         for row in range(ROWS):
@@ -15,7 +15,7 @@ class SurroundedRegions:
                     self.surround_region(region, board)
         return
     
-    def approach_short(self, board):
+    def approach_short(board):
         ROWS, COLS = len(board), len(board[0])
 
         def dfs_helper(row, col):
@@ -40,7 +40,7 @@ class SurroundedRegions:
                     board[row][col] = 'O'
         return
 
-    def solve(self, board: List[List[str]]) -> None:
+    def solve(board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.
         """
@@ -48,7 +48,7 @@ class SurroundedRegions:
         self.approach_short(board)
         return
 
-    def surround_region(self, region, board):
+    def surround_region(region, board):
         buffer = region.copy()
         can_surrounded = True
         while region:
@@ -62,7 +62,7 @@ class SurroundedRegions:
                 row, col = buffer.popleft()
                 board[row][col] = 'X'
 
-    def can_surrounded(self, row, col, board):
+    def can_surrounded(row, col, board):
         ROWS, COLS = len(board), len(board[0])
         up = down = left = right = False
         
@@ -96,7 +96,7 @@ class SurroundedRegions:
         
         return left & right & up & down
     
-    def find_region(self, row, col, board, visit, nodes):
+    def find_region(row, col, board, visit, nodes):
         if (
             min(row, col) < 0 or
             (row, col) in visit or

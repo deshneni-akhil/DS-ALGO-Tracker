@@ -1,12 +1,12 @@
 class ReverseWords:
 
-    def reverse(self, words, ptr1, ptr2):
+    def reverse(words, ptr1, ptr2):
         while ptr1 < ptr2:
             words[ptr1], words[ptr2] = words[ptr2], words[ptr1]
             ptr1 += 1
             ptr2 -= 1
 
-    def format_string(self, words):
+    def format_string(words):
         n = len(words)
         ptr1 = 0
         result = ''
@@ -20,7 +20,7 @@ class ReverseWords:
         return result.strip()
                 
 
-    def reverseWords(self, s: str) -> str:
+    def reverseWords(s: str) -> str:
         ptr1, ptr2 = 0, len(s) - 1
         words = list(s)
         self.reverse(words, ptr1, ptr2)

@@ -13,6 +13,6 @@ def permutations(nums, buffer):
     return 
 
 if __name__ == '__main__':
-    nums = [1,2,4,6,7,8,9]
+    nums = [1,2,4,6]
     permutations(nums, [])
     print(result)
